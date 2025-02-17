@@ -1,0 +1,13 @@
+1. ifconfig
+
+2. ipcalc 10.0.2.15
+
+3. nmap -p 80 10.0.2.0/24 -oG nullbyte.txt
+
+4. cat nullbyte.txt | awk '/Up$/{print $2}' | cat >> targetIP.txt
+
+5. cat targetIP.txt
+
+6. nikto -h targetIP.txt
+
+7. nikto -h www.espn.com -output output.txt
